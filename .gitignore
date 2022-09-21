@@ -31,7 +31,6 @@ node_modules/
 .sass-cache
 node_modules
 *.map
-/*.html
 .tmp
 tmp
 

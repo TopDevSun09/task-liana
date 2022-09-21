@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>ICVR</title>
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="my-timelinemax-animation.js"></script>
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header fixed">
+      <div class="container">
+        <a href="home-page.html" class="logo">
+          <picture>
+            <source media="(min-width:1024px)" srcset="assets/images/logo-desk.svg">
+            <img src="assets/images/logo-mob.svg" alt="logo">
+          </picture>
+        </a>
+
+        <div class="nav theme-bg js-burger">
+          <div class="theme-wrap js-theme-switch">
+            <button type="button" class="theme-btn js-theme-dark active">
+              <img class="dark-img" src="assets/images/theme-1.svg" alt="">
+              <img class="light-img" src="assets/images/theme-1-l.svg" alt="">
+            </button>
+            <button type="button" class="theme-btn js-theme-light">
+              <img src="assets/images/theme-2.svg" alt="">
+            </button>
+          </div>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <span class="menu__link theme-mob-color">Services</span>
+                <ul class="sub-menu">
+                  <li class="sub-menu__item">
+                    <!--<a href="immersive-service-web.html" class="sub-menu__link theme-mob-color">Immersive</a>-->
+                    <a href="#" class="sub-menu__link theme-mob-color" id="immersive">Immersive</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="virtual-production-service-web.html" class="sub-menu__link theme-mob-color">Virtual
+                      Production</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="game-development-service-web.html" class="sub-menu__link theme-mob-color">Game Development</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link theme-mob-color">ICTools</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <span class="menu__link theme-mob-color">Media</span>
+                <ul class="sub-menu">
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link theme-mob-color">Blog</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link theme-mob-color">Podcast</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link theme-mob-color">About Us </a>
+              </li>
+              <li class="menu__item">
+                <a href="media-events.html" class="menu__link theme-mob-color">Events</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn primary">Bring your project to life</button>
+        </div>
+
+        <div class="burger js-burger-open">
+          <img class="burger__open" src="assets/images/burger.svg" alt="">
+          <img class="burger__close light" src="assets/images/burger-close.svg" alt="">
+          <img class="burger__close dark" src="assets/images/burger-close-l.svg" alt="">
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro-section intro-about-section flex-column flex-auto">
+        <div class="container flex-column flex-auto">
+          <div class="intro">
+            <div class="intro__head mb-4">
+              <p class="small-text small-text--big opasity-09 mb-25">Who we serve</p>
+              <h1 class="main-title mb-25">
+                B+ to AAA <br />
+                Game Studios
+              </h1>
+              <div class="intro__text-wrap">
+                <p class="base-text">
+                  VFX, Animation & Production <br />
+                  for Real Time B2B full cycle custom <br />
+                  products produced by ICVR <br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#mission" class="link-scroll theme-color fit-width m-auto mb-0 js-link-to">
+            <div class="link-scroll__icon arrow-down">
+              <svg width="10" height="70" viewBox="0 0 10 70" fill="none">
+              <path d="M9.91827 62.6179C9.80351 62.4229 9.58529 62.3013 9.34794 62.3013L5.65208 62.3013L5.65208 0.611912C5.65208 0.274136 5.35996 -2.02823e-07 5.00002 -2.18556e-07C4.64009 -2.34289e-07 4.34796 0.274136 4.34796 0.611912L4.34796 62.3013L0.652103 62.3013C0.413884 62.3013 0.195662 62.4229 0.0817691 62.6179C-0.033862 62.8129 -0.0260381 63.0511 0.100026 63.2396L4.44795 69.7144C4.56792 69.8923 4.77571 70 5.00002 70C5.22433 70 5.43212 69.8923 5.5521 69.7144L9.90002 63.2396C9.96609 63.1401 10 63.0267 10 62.9132C10 62.8121 9.97218 62.7101 9.91827 62.6179Z" fill="currentColor"/>
+              </svg>
+
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="mission-section flex-column flex-auto" id="mission">
+        <div class="container small flex-column flex-auto">
+          <div class="about">
+            <div class="about__wrap mission">
+              <div class="about__row">
+                <div class="about__title-col mb-4 mb-md-5 mb-lg-0">
+                  <p class="small-text small-text--big theme-color opacity-09 mb-2 mb-lg-25">ICVR mission statement</p>
+                  <h1 class="main-title theme-color">
+                    At the heart <br class="tablet" />
+                    we are interactive  <br class="tablet" /> content creators
+                  </h1>
+                </div>
+                <div class="about__text-col">
+                  <p class="base-text theme-color mb-15 mb-md-2 mb-lg-25">
+                    Our day-to-day mission is to transform /improve storytelling from passive to interactive, regardless of the medium.
+                  </p>
+                  <p class="base-text theme-color">
+                    However, we have to build and invest in technological resources to make this type of storytelling possible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exploration-section">
+        <div class="container small flex-column flex-auto">
+          <div class="about">
+            <div class="about__wrap exploration">
+              <p class="small-text theme-color opacity-05 mb-2 mb-lg-25">Fearless exploration</p>
+              <h1 class="about__title theme-color opacity-02 mb-4">it's okay that we don't know, but we figure it out</h1>
+              <p class="base-text theme-color">
+                A lot of other production studios force an out-of-the-box <br class="tablet" />
+                approach while ICVR focused on R&D to supply unique, <br class="tablet" />
+                never done before solutions
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision-section flex-column flex-auto">
+        <div class="container small flex-column flex-auto">
+          <div class="vision mb-9 mb-md-8">
+            <div class="vision__wrap">
+              <div class="vision__row">
+                <div class="vision__title-col mb-3 mb-md-4 mb-lg-0">
+                  <p class="small-text small-text--big theme-color opacity-09 mb-2 mb-lg-25">ICVR vision statement</p>
+                  <h1 class="main-title theme-color mb-25 mb-xl-3">To make technological advancements publicly available</h1>
+                  <p class="vision__text theme-color opacity-05">to allow other storytellers <br> to achieve what we've achieved.</p>
+                </div>
+                <div class="vision__text-col">
+                  <p class="base-text base-text--big theme-color mb-15 mb-md-2 mb-lg-25">
+                    We want to be recognized globally for what we do, as a full stop shop. The best at telling interactive storytelling regardless
+                    of format or application, (i.e. movie, in-real-life experience)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quote">
+            <div class="quote__wrap">
+              <div class="quote__img img-wrap mb-25 mb-md-3 mb-lg-0">
+                <img class="dark-img" src="assets/images/quote.svg" alt="quotes" />
+                <img class="light-img" src="assets/images/quote-l.svg" alt="quotes" />
+              </div>
+              <div class="quote__content">
+                <h2 class="quote__title theme-color mb-2 mb-md-25 mb-lg-15">We aim to be the household name for people that want do to crazy shit</h2>
+                <p class="quote__text theme-color opacity-05">We want to be this for anything interactive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grows-section flex-column flex-auto">
+        <div class="container flex-column flex-auto">
+          <div class="tabs flex-auto js-tabs">
+            <div class="tabs__header-wrap">
+              <ul class="tabs__header">
+                <li data-tab="tab-2018" class="tabs__btn theme-color">2018</li>
+                <li data-tab="tab-2019" class="tabs__btn theme-color active">2019</li>
+                <li data-tab="tab-2020" class="tabs__btn theme-color">2020</li>
+                <li data-tab="tab-2021" class="tabs__btn theme-color">2021</li>
+                <li data-tab="tab-2022" class="tabs__btn theme-color">2022</li>
+              </ul>
+            </div>
+            <div class="tabs__content" data-content="tab-2018">
+              <div class="tab-board">
+                  <div class="tab-board__wrap">
+                    <div class="tab-board__img-mob mb-3 mb-md-0 widescreen-none">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="assets/images/grows-md.webp" />
+                        <img src="assets/images/grows-sm.webp" alt="img" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="tab-board__content grows">
+                      <h2 class="tab-board__title theme-color mb-25">2018</h2>
+                      <p class="base-text theme-color tab-board__text left">
+                        This partnership is ICVR's entry into <br />
+                        the Entertainment and Media Industry.
+                      </p>
+                      <p class="base-text theme-color">
+                        ICVR grows from 2 to 23 team members <br />
+                        under a work for hire model, after pitching <br />
+                        for VC capital doesn't yield results.
+                      </p>
+                      <p class="base-text theme-color tab-board__text right">
+                        They switch to doing public appearances <br />
+                        demoing photorealistic digital humans which <br class="widescreen" />
+                        attracts their first large project partnership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-board__img-desk one img-wrap widescreen">
+                    <img src="assets/images/grows-lg-1.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk two img-wrap widescreen">
+                    <img src="assets/images/slide2.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk three img-wrap widescreen">
+                    <img src="assets/images/grows-lg-3.webp" alt="">
+                </div>
+            </div>
+            <div class="tabs__content active" data-content="tab-2019">
+              <div class="tab-board">
+                <div class="tab-board__wrap">
+                  <div class="tab-board__img-mob mb-3 mb-md-0 widescreen-none">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="assets/images/grows-md.webp" />
+                      <img src="assets/images/grows-sm.webp" alt="img" loading="lazy" />
+                    </picture>
+                  </div>
+                  <div class="tab-board__content grows">
+                    <h2 class="tab-board__title theme-color mb-25">ICVR grows</h2>
+                    <p class="base-text theme-color tab-board__text left">
+                      This partnership is ICVR's entry into <br />
+                      the Entertainment and Media Industry.
+                    </p>
+                    <p class="base-text theme-color">
+                      ICVR grows from 2 to 23 team members <br />
+                      under a work for hire model, after pitching <br />
+                      for VC capital doesn't yield results.
+                    </p>
+                    <p class="base-text theme-color tab-board__text right">
+                      They switch to doing public appearances <br />
+                      demoing photorealistic digital humans which <br class="widescreen" />
+                      attracts their first large project partnership.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-board__img-desk one img-wrap widescreen">
+                  <img src="assets/images/grows-lg-1.webp" alt="">
+              </div>
+              <div class="tab-board__img-desk two img-wrap widescreen">
+                  <img src="assets/images/grows-lg-2.webp" alt="">
+              </div>
+              <div class="tab-board__img-desk three img-wrap widescreen">
+                  <img src="assets/images/grows-lg-3.webp" alt="">
+              </div>
+            </div>
+            <div class="tabs__content" data-content="tab-2020">
+              <div class="tab-board">
+                <div class="tab-board__wrap">
+                  <div class="tab-board__img-mob mb-3 mb-md-0 widescreen-none">
+                    <picture>
+                      <source media="(min-width: 768px)" srcset="assets/images/model-md.webp" />
+                      <img src="assets/images/model-sm.webp" alt="img" loading="lazy" />
+                    </picture>
+                  </div>
+                  <div class="tab-board__content model">
+                    <h2 class="tab-board__title theme-color mb-25">Business model changes</h2>
+                    <p class="base-text theme-color">When COVID-19 hit all but 2 projects were canceled.</p>
+                    <p class="base-text theme-color">
+                      ICVR had to change its' business model and in doing so they were determined to give venture capital another shot so they
+                      could focus on their center ambition, storytelling through way of virtual production.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-board__img-desk left img-wrap widescreen">
+                <img src="assets/images/model-left.webp" alt="" />
+              </div>
+              <div class="tab-board__img-desk right img-wrap widescreen">
+                <img src="assets/images/model-right.webp" alt="" />
+              </div>
+            </div>
+            <div class="tabs__content" data-content="tab-2021">
+              <div class="tab-board">
+                  <div class="tab-board__wrap">
+                    <div class="tab-board__img-mob mb-3 mb-md-0 widescreen-none">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="assets/images/grows-md.webp" />
+                        <img src="assets/images/grows-sm.webp" alt="img" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="tab-board__content grows">
+                      <h2 class="tab-board__title theme-color mb-25">2021</h2>
+                      <p class="base-text theme-color tab-board__text left">
+                        This partnership is ICVR's entry into <br />
+                        the Entertainment and Media Industry.
+                      </p>
+                      <p class="base-text theme-color">
+                        ICVR grows from 2 to 23 team members <br />
+                        under a work for hire model, after pitching <br />
+                        for VC capital doesn't yield results.
+                      </p>
+                      <p class="base-text theme-color tab-board__text right">
+                        They switch to doing public appearances <br />
+                        demoing photorealistic digital humans which <br class="widescreen" />
+                        attracts their first large project partnership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-board__img-desk one img-wrap widescreen">
+                    <img src="assets/images/slide3.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk two img-wrap widescreen">
+                    <img src="assets/images/grows-lg-2.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk three img-wrap widescreen">
+                    <img src="assets/images/news-bg-1.webp" alt="">
+                </div>
+            </div>
+            <div class="tabs__content" data-content="tab-2022">
+              <div class="tab-board">
+                  <div class="tab-board__wrap">
+                    <div class="tab-board__img-mob mb-3 mb-md-0 widescreen-none">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="assets/images/grows-md.webp" />
+                        <img src="assets/images/grows-sm.webp" alt="img" loading="lazy" />
+                      </picture>
+                    </div>
+                    <div class="tab-board__content grows">
+                      <h2 class="tab-board__title theme-color mb-25">2022</h2>
+                      <p class="base-text theme-color tab-board__text left">
+                        This partnership is ICVR's entry into <br />
+                        the Entertainment and Media Industry.
+                      </p>
+                      <p class="base-text theme-color">
+                        ICVR grows from 2 to 23 team members <br />
+                        under a work for hire model, after pitching <br />
+                        for VC capital doesn't yield results.
+                      </p>
+                      <p class="base-text theme-color tab-board__text right">
+                        They switch to doing public appearances <br />
+                        demoing photorealistic digital humans which <br class="widescreen" />
+                        attracts their first large project partnership.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-board__img-desk one img-wrap widescreen">
+                    <img src="assets/images/news-bg-2.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk two img-wrap widescreen">
+                    <img src="assets/images/grows-lg-2.webp" alt="">
+                </div>
+                <div class="tab-board__img-desk three img-wrap widescreen">
+                    <img src="assets/images/slide2.webp" alt="">
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section theme-bg flex-column flex-auto">
+        <div class="container small flex-column flex-auto">
+          <div class="team">
+            <div class="team__wrap">
+              <div class="team__img mb-4 mb-md-5 mb-lg-0">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="assets/images/team-lg.webp" />
+                  <img src="assets/images/team-md.webp" alt="img" loading="lazy" />
+                </picture>
+              </div>
+              <div class="team__content">
+                <h2 class="main-title theme-color mb-25">
+                  Meet <br class="desktop" />
+                  our<br class="desktop" />
+                  team
+                </h2>
+                <p class="base-text base-text--big theme-color mb-4 mb-xl-6">We want to be this for anything interactive.</p>
+                <button type="button" data-trigger="info-popup" class="btn primary medium mob-width team__btn js-show-popup">Join the Team</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts-section flex-column flex-auto">
+        <div class="container small flex-column flex-auto">
+          <div class="contacts flex-column flex-auto">
+            <div class="contacts__wrap flex-column flex-auto">
+              <h1 class="section-title theme-color section-title--medium mb-15 mb-md-3 mb-lg-15">
+                We are always <br />
+                in touch
+              </h1>
+              <p class="base-text theme-color mb-4 mb-md-3 mb-xl-6">
+                We will be glad to make <br class="tablet-none" />
+                something new for you!
+              </p>
+              <div class="contacts__info mb-6">
+                <div class="contact">
+                  <div class="contact__icon">
+                    <img class="dark-img" src="assets/images/local.svg" alt="" />
+                    <img class="light-img" src="assets/images/local-l.svg" alt="" />
+                  </div>
+                  <div class="contact__body">
+                    <span class="contact__name theme-color">Head office</span>
+                    <a href="#" class="contact__link theme-color">Los Angeles, California</a>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact__icon">
+                    <img class="dark-img" src="assets/images/email.svg" alt="" />
+                    <img class="light-img" src="assets/images/email-l.svg" alt="" />
+                  </div>
+                  <div class="contact__body">
+                    <span class="contact__name theme-color">Email</span>
+                    <a href="#" class="contact__link theme-color">info@icvr.io</a>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact__icon">
+                    <img class="dark-img" src="assets/images/phone.svg" alt="" />
+                    <img class="light-img" src="assets/images/phone-l.svg" alt="" />
+                  </div>
+                  <div class="contact__body">
+                    <span class="contact__name theme-color">Phone</span>
+                    <a href="#" class="contact__link theme-color">+1 (310) 489-0185</a>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts__soc mt-auto mb-0">
+                <a href="#" class="soc-link icon-wrap theme-color"> 
+                  <svg width="32" height="30" viewBox="0 0 32 30" fill="none">
+                      <path d="M32 15.092C32 6.757 24.837 0 16 0S0 6.757 0 15.092C0 22.624 5.85 28.868 13.5 30V19.454H9.437v-4.362H13.5v-3.325c0-3.783 2.389-5.872 6.043-5.872 1.75 0 3.582.295 3.582.295v3.714h-2.017c-1.988 0-2.608 1.163-2.608 2.358v2.83h4.438l-.71 4.362H18.5V30C26.15 28.868 32 22.624 32 15.092z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3.2 0C1.433 0 0 1.343 0 3v24c0 1.657 1.433 3 3.2 3h10.3V19.454H9.437v-4.362H13.5v-3.325c0-3.783 2.389-5.872 6.043-5.872 1.75 0 3.582.295 3.582.295v3.714h-2.017c-1.988 0-2.608 1.163-2.608 2.358v2.83h4.438l-.71 4.362H18.5V30h10.3c1.767 0 3.2-1.343 3.2-3V3c0-1.657-1.433-3-3.2-3H3.2z" fill="currentColor"/>
+                  </svg> 
+                </a>
+                <a href="#" class="soc-link icon-wrap theme-color"> 
+                  <svg width="31" height="25" viewBox="0 0 31 25" fill="none">
+                      <path d="M9.752 25c11.696 0 18.094-9.62 18.094-17.958 0-.27-.006-.547-.018-.818 1.245-.893 2.319-2 3.172-3.268-1.16.512-2.39.847-3.65.992A6.355 6.355 0 0030.146.457a12.843 12.843 0 01-4.037 1.532A6.383 6.383 0 0022.5.083a6.41 6.41 0 00-4.032.664 6.34 6.34 0 00-2.795 2.96 6.277 6.277 0 00-.406 4.038 18.17 18.17 0 01-7.259-1.913 18.039 18.039 0 01-5.847-4.678 6.279 6.279 0 00-.695 4.598A6.32 6.32 0 004.13 9.577a6.404 6.404 0 01-2.882-.787v.078a6.28 6.28 0 001.437 4 6.367 6.367 0 003.666 2.19 6.368 6.368 0 01-2.87.108 6.327 6.327 0 002.262 3.137 6.404 6.404 0 003.677 1.25A12.817 12.817 0 010 22.165 18.142 18.142 0 009.752 25z" fill="currentColor"/>
+                  </svg> 
+                </a>
+                <a href="#" class="soc-link icon-wrap theme-color">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M15.009 2.702c4.01 0 4.485.017 6.062.088 1.466.064 2.257.31 2.785.515a4.64 4.64 0 011.723 1.12c.528.527.85 1.025 1.12 1.723.205.527.452 1.324.516 2.783.07 1.583.088 2.058.088 6.06 0 4.009-.018 4.483-.088 6.06-.064 1.465-.31 2.256-.516 2.784a4.64 4.64 0 01-1.12 1.723 4.616 4.616 0 01-1.723 1.12c-.528.204-1.325.45-2.785.515-1.583.07-2.058.088-6.062.088-4.01 0-4.485-.018-6.062-.088-1.466-.065-2.258-.31-2.785-.516a4.642 4.642 0 01-1.724-1.12 4.614 4.614 0 01-1.12-1.722c-.205-.528-.451-1.325-.516-2.784-.07-1.582-.088-2.057-.088-6.06 0-4.008.018-4.483.088-6.06.065-1.465.311-2.256.516-2.783a4.64 4.64 0 011.12-1.723 4.617 4.617 0 011.724-1.12c.527-.205 1.325-.45 2.785-.515 1.577-.07 2.052-.088 6.062-.088zm0-2.702c-4.075 0-4.585.018-6.185.088-1.595.07-2.691.328-3.641.697-.991.387-1.83.897-2.662 1.735A7.35 7.35 0 00.786 5.175C.416 6.13.158 7.22.088 8.815.018 10.42 0 10.93 0 15.002c0 4.073.018 4.583.088 6.183.07 1.594.328 2.69.698 3.64.387.99.897 1.828 1.735 2.66a7.336 7.336 0 002.656 1.729c.956.369 2.046.627 3.64.697 1.601.07 2.111.088 6.186.088 4.075 0 4.585-.018 6.185-.088 1.595-.07 2.691-.328 3.641-.697a7.337 7.337 0 002.656-1.73 7.333 7.333 0 001.73-2.654c.369-.955.627-2.045.697-3.64.07-1.6.088-2.11.088-6.182 0-4.073-.018-4.583-.088-6.183-.07-1.594-.328-2.69-.698-3.64a7.027 7.027 0 00-1.717-2.666A7.336 7.336 0 0024.84.791C23.885.422 22.795.164 21.2.094 19.593.018 19.083 0 15.009 0z" fill="currentColor"/>
+                      <path d="M15.009 7.296a7.71 7.71 0 00-7.71 7.707 7.71 7.71 0 0015.42 0 7.71 7.71 0 00-7.71-7.707zm0 12.706a5 5 0 01-5.001-5 5 5 0 0110.002 0 5 5 0 01-5.001 5zm9.814-13.01a1.8 1.8 0 11-1.8-1.8c.991 0 1.8.81 1.8 1.8z" fill="currentColor"/>
+                  </svg>
+                </a>
+                <a href="#" class="soc-link icon-wrap theme-color"> 
+                  <svg width="32" height="30" viewBox="0 0 32 30" fill="none">
+                      <path d="M29.631 0H2.363C1.056 0 0 .967 0 2.162v25.67C0 29.027 1.056 30 2.362 30h27.27C30.936 30 32 29.027 32 27.838V2.162C32 .967 30.937 0 29.631 0zM9.494 25.564h-4.75v-14.32h4.75v14.32zM7.119 9.293c-1.525 0-2.756-1.154-2.756-2.578s1.23-2.578 2.756-2.578c1.518 0 2.75 1.154 2.75 2.578 0 1.418-1.232 2.578-2.75 2.578zm20.15 16.271h-4.744v-6.96c0-1.659-.031-3.797-2.469-3.797-2.469 0-2.844 1.81-2.844 3.68v7.078h-4.737v-14.32h4.55V13.2h.063c.63-1.125 2.18-2.314 4.487-2.314 4.806 0 5.694 2.965 5.694 6.82v7.857z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <div class="overlay js-overlay"></div>
+  <div class="popup js-popup" data-popup="search-popup">
+    <div class="popup__wrap">
+      <button type="button" class="popup__close fixed js-popup-close">
+        <img src="assets/images/icon-close.svg" alt="close" />
+      </button>
+      <form class="form form--search mb-4 mb-md-6" action="#">
+        <div class="form__wrap">
+          <div class="form__field theme-border theme-bg form__field--search">
+            <button type="submit" value="Search" class="form__search-btn img-wrap icon-search mr-2">
+              <img src="assets/images/search.svg" alt="" />
+            </button>
+            <input type="search" placeholder="Search" class="form__input" />
+          </div>
+        </div>
+      </form>
+      <div class="popup__scroll scroll-wrap">
+        <div class="popup__body flex-column">
+          <div class="row events-row">
+            <div class="col col-lg-6">
+              <div class="event-card">
+                <div class="event-card__wrap flex-column">
+                  <span class="date-status fit-width mb-2 mb-md-3">APR 12, 2022</span>
+                  <h3 class="event-card__title mb-25 mb-md-3">
+                    ICVR’S “AWAY” NAMED WINNER <br class="widescreen-lg" />
+                    OF 5 TELLY AWARDS
+                  </h3>
+                  <a href="media-event.html" class="link-arrow desk-width">
+                    <span class="mr-25">Go to event</span>
+                    <span class="link-arrow__icon img-wrap icon-arrow m-0 ml-auto">
+                      <img src="assets/images/icon-arrow.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-6">
+              <div class="event-card">
+                <div class="event-card__wrap flex-column">
+                  <span class="date-status fit-width mb-2 mb-md-3">APR 12, 2022</span>
+                  <h3 class="event-card__title mb-25 mb-md-3">
+                    MESA's Hollywood Innovation<br class="widescreen-lg" />
+                    and Transformation Summit
+                  </h3>
+                  <a href="media-event.html" class="link-arrow desk-width">
+                    <span class="mr-25">Go to event</span>
+                    <span class="link-arrow__icon img-wrap icon-arrow m-0 ml-auto">
+                      <img src="assets/images/icon-arrow.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="result m-auto fit-width">
+            <div class="result__wrap flex-column">
+              <div class="result__img-none img-wrap mb-3">
+                <img src="assets/images/search-none.svg" alt="none" />
+              </div>
+              <span class="result__text">Nothing found</span>
+            </div>
+          </div>
+          <div class="result m-auto fit-width">
+            <div class="result__wrap flex-column">
+              <div class="result__img-enter img-wrap mb-3">
+                <img src="assets/images/search-enter.svg" alt="none" />
+              </div>
+              <span class="result__text">enter the query</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--subscribe js-popup" data-popup="subscribe-popup">
+    <div class="popup__wrapper theme-bg">
+      <div class="popup__container popup__container--desk">
+        <div class="popup__head">
+          <div class="popup__logo">
+            <a href="home-page.html" class="logo">
+              <picture class="dark-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+              <picture class="light-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+            </a>
+          </div>
+          <button type="button" class="popup__close js-popup-close">
+            <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+            <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+          </button>
+        </div>
+        <div class="popup__img popup__img--subscr mb-4 mb-lg-0 tablet desktop-none">
+          <img src="assets/images/popup-subscr-md.webp" alt="img" />
+        </div>
+        <div class="popup__scroll popup__scroll--subscr scroll-wrap">
+          <div class="popup__body flex-column">
+            <div class="popup__subscr-text mb-4 mb-xl-6">
+              <p class="small-text small-text--tablet theme-color mb-2">The future of what’s possible is here.</p>
+              <h2 class="popup__title theme-color mb-2 mb-md-3">Are you joining us?</h2>
+              <p class="base-text theme-color mb-1 mb-md-15 mb-lg-2">
+                The knowledge and insight from thought leaders <br class="tablet" />
+                in the industry are of great inspiration to us.
+              </p>
+              <p class="base-text theme-color">We want to share with you.</p>
+            </div>
+            <div class="popup__subscr-form mb-4">
+              <form action="#" class="form">
+                <div class="form__wrap">
+                  <div class="form__block form__block--desk">
+                    <div class="form__field theme-border theme-bg form__field--email mb-15 mb-md-0 mb-lg-25">
+                      <input type="email" class="form__input" placeholder="Enter your email" />
+                    </div>
+                    <button type="submit" class="btn primary medium full-width disabled">Get started now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="popup__subscr-text m-0 mt-auto">
+              <a href="policy.html" class="base-link theme-color fit-width mb-1 mb-md-15">PRIVACY POLICY</a>
+              <p class="sub-text opacity-05 theme-color">We respect your privacy and we won't share your information</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--book js-popup" data-popup="book-popup">
+    <div class="popup__wrapper theme-bg">
+      <div class="popup__container popup__container--desk">
+        <div class="popup__head">
+          <div class="popup__logo">
+            <a href="home-page.html" class="logo">
+              <picture class="dark-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+              <picture class="light-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+            </a>
+          </div>
+          <button type="button" class="popup__close js-popup-close">
+            <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+            <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+          </button>
+        </div>
+        <div class="popup__scroll popup__scroll--book scroll-wrap">
+          <div class="popup__body flex-column">
+            <div class="mb-4 mb-xl-6">
+              <h2 class="section-title theme-color mb-1 mb-md-2 mb-lg-15">
+                Book <br class="tablet-none" />
+                a consultation
+              </h2>
+              <p class="base-text theme-color">Fill out the form or call us</p>
+            </div>
+            <div class="popup__book-form">
+              <form action="#" class="form">
+                <div class="form__wrap mb-5 mb-md-4 mb-xl-6">
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2">Contact Information</label>
+                    <div class="form__row">
+                      <div class="form__col">
+                        <div class="form__field theme-border theme-bg">
+                          <input type="text" class="form__input" placeholder="Full name" />
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="form__field theme-border theme-bg">
+                          <input type="text" class="form__input" placeholder="Company" />
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="form__field theme-border theme-bg">
+                          <input type="email" class="form__input" placeholder="Email" />
+                        </div>
+                      </div>
+                      <div class="form__col">
+                        <div class="form__field theme-border theme-bg">
+                          <input type="number" class="form__input" placeholder="Phone number" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25">
+                      Services <span class="ml-1">/ What type of project are you looking to create? </span>
+                    </label>
+                    <div class="form__radios">
+                      <div class="radio-row">
+                        <label class="radio">
+                          <input type="radio" name="type" id="Immersive" class="radio__input sr-only" checked />
+                          <span class="radio__btn theme-color theme-border">Immersive</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="type" id="Virtual Production" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">Virtual Production</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="type" id="Game Development" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">Game Development</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="type" id="ICTools" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">ICTools</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="type" id="Other" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">Other</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25">Budget <span class="ml-1">/ USD</span></label>
+                    <div class="form__radios">
+                      <div class="radio-row">
+                        <label class="radio">
+                          <input type="radio" name="budget" id="> 20k" class="radio__input sr-only" checked />
+                          <span class="radio__btn theme-color theme-border">> 20k</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="budget" id="20k - 50k" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">20k - 50k</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="budget" id="50k - 100k" class="radio__input sr-only" checked />
+                          <span class="radio__btn theme-color theme-border">50k - 100k</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="budget" id="100k+" class="radio__input sr-only" />
+                          <span class="radio__btn theme-color theme-border">100k+</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25">How did you hear about us</label>
+                    <div class="form__select">
+                      <div class="select js-select">
+                        <div class="select__head theme-bg theme-border js-select-btn">
+                          <span class="select__text color-gray">Choose your option</span>
+                        </div>
+                        <ul class="select__list js-select-list">
+                          <li class="select__item js-select-option active" data-value="op-1">
+                            <span class="select__text theme-color"> Instagram </span>
+                          </li>
+                          <li class="select__item js-select-option" data-value="op-1">
+                            <span class="select__text theme-color"> Twitter </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn primary medium form__btn mob-width">Sumbit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--thank js-popup" data-popup="thank-popup">
+    <div class="popup__wrapper theme-bg">
+      <div class="popup__container">
+        <div class="popup__head">
+          <div class="popup__logo">
+            <a href="home-page.html" class="logo">
+              <picture class="dark-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+              <picture class="light-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+            </a>
+          </div>
+          <button type="button" class="popup__close js-popup-close">
+            <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+            <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+          </button>
+        </div>
+        <div class="popup__img popup__img--thank desktop-none">
+          <img src="assets/images/thank-md.webp" alt="Thank" />
+        </div>
+        <div class="popup__scroll popup__scroll--book scroll-wrap">
+          <div class="popup__body flex-column">
+            <div class="popup__thanks">
+              <h2 class="section-title theme-color desktop-none mb-1">Thank you</h2>
+              <h2 class="section-title theme-color desktop mb-1">Thank you, <br />your application has been accepted</h2>
+              <p class="big-text theme-color desktop-none mb-2 mb-md-25">
+                your application <br />
+                has been accepted
+              </p>
+              <p class="base-text theme-color mb-10">Our manager will contact you soon!</p>
+              <a href="home-page.html" class="btn primary medium popup__btn mob-width">Go to home page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--full popup--info js-popup js-wrap" data-popup="info-popup">
+    <div class="popup__wrapper theme-bg">
+      <form action="#" class="form popup__form">
+        <div class="popup__header popup__header--desk js-head">
+          <div class="popup__logo">
+            <a href="home-page.html" class="logo">
+              <picture class="dark-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+              <picture class="light-img">
+                <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+                <img src="assets/images/logo-mob.svg" alt="logo" />
+              </picture>
+            </a>
+          </div>
+          <button type="button" class="popup__close js-popup-close">
+            <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+            <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+          </button>
+        </div>
+        <div class="popup__container popup__container--desk scroll-wrap js-body">
+          <div class="popup__body flex-column">
+            <div class="mb-4 mb-xl-6">
+              <h2 class="section-title theme-color mb-1 mb-md-2 mb-lg-15">
+                Tell about <br />
+                yourself
+              </h2>
+              <p class="base-text theme-color">We will contact you when we need your talent</p>
+            </div>
+            <div class="popup__info-form">
+              <div class="form__wrap">
+                <div class="form__inner active" data-step="1">
+                  <label class="form__label theme-color mb-2">Contact Information</label>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="text" class="form__input" placeholder="Full name" />
+                        <button type="button" class="delete-btn ml-15"></button>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="text" class="form__input" placeholder="Company" />
+                        <button type="button" class="delete-btn ml-15"></button>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg invalid">
+                        <input type="email" class="form__input" placeholder="Email" value="username.gmail.ru" />
+                        <button type="button" class="delete-btn ml-15"></button>
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="number" class="form__input" placeholder="Phone number" />
+                        <button type="button" class="delete-btn ml-15"></button>
+                      </div>
+                    </div>
+                    <div class="form__col desktop-none">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="file" class="form-file__input sr-only" id="link" />
+                        <label for="link" class="form-file upload">
+                          <span class="form-file__icon attach-icon mr-15">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10.1293 12.0608H8.51718V13.7216C8.51718 14.1152 8.20967 14.432 7.82761 14.432C7.44554 14.432 7.12871 14.1152 7.12871 13.7216V12.0608H5.52592C5.14386 12.0608 4.82702 11.744 4.82702 11.3504C4.82702 10.9472 5.14386 10.6304 5.52592 10.6304H7.12871V8.9696C7.12871 8.576 7.44554 8.2592 7.82761 8.2592C8.20967 8.2592 8.51718 8.576 8.51718 8.9696V10.6304H10.1293C10.5114 10.6304 10.8282 10.9472 10.8282 11.3504C10.8282 11.744 10.5114 12.0608 10.1293 12.0608ZM15.5807 6.7392C15.18 6.7392 14.7047 6.7488 14.4158 6.7488C13.9872 6.7488 13.4281 6.7392 12.7199 6.7392C11.0146 6.7296 9.60746 5.2896 9.60746 3.5328V0.4416C9.60746 0.2016 9.42108 0 9.1788 0H4.20268C1.88235 0 0 1.9488 0 4.3296V15.4784C0 17.9744 1.97554 20 4.39837 20H11.8066C14.127 20 16 18.0704 16 15.6896V7.1712C16 6.9312 15.8136 6.7392 15.5807 6.7392Z"
+                                fill="#8F8F95"
+                              />
+                              <path
+                                d="M13.1737 4.92907C13.8232 4.93579 14.7261 4.93867 15.4921 4.93579C15.8844 4.93483 16.0839 4.45195 15.8118 4.16107C14.8277 3.10699 13.0674 1.22059 12.0601 0.14155C11.7815 -0.15701 11.2941 0.04843 11.2941 0.46219V2.99275C11.2941 4.05451 12.143 4.92907 13.1737 4.92907Z"
+                                fill="#8F8F95"
+                              />
+                            </svg>
+                          </span>
+                          <span class="flex-column">
+                            <span class="form-file__title theme-color">Leave a link to your CV</span>
+                            <span class="form-file__text theme-color mt-05 tablet">PDF, Maximum file size: 5 MB.</span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__inner" data-step="2">
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25"> What company values are important to you? </label>
+                    <div class="form__field theme-border theme-bg">
+                      <input type="text" class="form__input" placeholder="Tell us about it" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25"> What motivates you to achieve the best result? </label>
+                    <div class="form__field theme-border theme-bg">
+                      <input type="text" class="form__input" placeholder="Tell us about it" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__inner" data-step="3">
+                  <div class="form__block-wrap">
+                    <label class="form__label theme-color mb-2 mb-lg-25"> Do you have a career plan and ambitions? </label>
+                    <div class="form__field theme-border theme-bg">
+                      <input type="text" class="form__input" placeholder="Tell us more" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer popup__footer--desk js-footer">
+          <div class="popup__footer-top mb-5 mb-md-18 mb-lg-6">
+            <button type="submit" class="btn primary medium form__btn disable mob-width mb-lg-25 mb-xl-0 mr-xl-3">Book a consultation</button>
+            <div class="form__file-col desktop">
+              <input type="file" class="form-file__input sr-only" id="resume" />
+              <label for="resume" class="form-file upload">
+                <span class="form-file__icon attach-icon icon-wrap mr-15">
+                  <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10.1293 12.0608H8.51718V13.7216C8.51718 14.1152 8.20967 14.432 7.82761 14.432C7.44554 14.432 7.12871 14.1152 7.12871 13.7216V12.0608H5.52592C5.14386 12.0608 4.82702 11.744 4.82702 11.3504C4.82702 10.9472 5.14386 10.6304 5.52592 10.6304H7.12871V8.9696C7.12871 8.576 7.44554 8.2592 7.82761 8.2592C8.20967 8.2592 8.51718 8.576 8.51718 8.9696V10.6304H10.1293C10.5114 10.6304 10.8282 10.9472 10.8282 11.3504C10.8282 11.744 10.5114 12.0608 10.1293 12.0608ZM15.5807 6.7392C15.18 6.7392 14.7047 6.7488 14.4158 6.7488C13.9872 6.7488 13.4281 6.7392 12.7199 6.7392C11.0146 6.7296 9.60746 5.2896 9.60746 3.5328V0.4416C9.60746 0.2016 9.42108 0 9.1788 0H4.20268C1.88235 0 0 1.9488 0 4.3296V15.4784C0 17.9744 1.97554 20 4.39837 20H11.8066C14.127 20 16 18.0704 16 15.6896V7.1712C16 6.9312 15.8136 6.7392 15.5807 6.7392Z"
+                      fill="#8F8F95"
+                    />
+                    <path
+                      d="M13.1737 4.92907C13.8232 4.93579 14.7261 4.93867 15.4921 4.93579C15.8844 4.93483 16.0839 4.45195 15.8118 4.16107C14.8277 3.10699 13.0674 1.22059 12.0601 0.14155C11.7815 -0.15701 11.2941 0.04843 11.2941 0.46219V2.99275C11.2941 4.05451 12.143 4.92907 13.1737 4.92907Z"
+                      fill="#8F8F95"
+                    />
+                  </svg>
+                </span>
+                <span class="flex-column">
+                  <span class="form-file__title theme-color mb-1">Upload your resume</span>
+                  <span class="form-file__text theme-color">PDF, Maximum file size: 5 MB.</span>
+                </span>
+              </label>
+              <div class="form-file">
+                <span class="attach-icon img-wrap mr-2">
+                  <img src="assets/images/file-icon.svg" alt="file" />
+                </span>
+                <span class="flex-column">
+                  <span class="form-file__title theme-colo mb-1">resume.pdf</span>
+                  <span class="form-file__text theme-colo">3.2 MB</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-nav">
+            <div class="form-nav__number-wrap is-desktop mr-2">
+              <span class="form-nav__number-currnet mr-05">1</span>
+              <div class="form-nav__number-total">/ 3</div>
+            </div>
+            <div class="form-nav__bullets">
+              <span class="nav-bullet active"></span>
+              <span class="nav-bullet"></span>
+              <span class="nav-bullet"></span>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="my-timelinemax-animation.js"></script>
+</body>
+</html>
