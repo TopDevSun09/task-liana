@@ -25,9 +25,10 @@
 .studyCase4-img {
   width: 274px;
   height: 273px;
+  border-radius: 137px;
   animation: mymove4 3s infinite;
 }
 
 @keyframes mymove4 {
-  50% {border-radius: 137px;}
+  50% {border-radius: 0;}
 }

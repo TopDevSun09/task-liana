@@ -200,11 +200,12 @@ function scrollBanner() {
     }
   });
 }
-const anime1 = require('animejs');
-const anime2 = require('animejs');
-const anime3 = require('animejs');
-const anime4 = require('animejs');
-const anime5 = require('animejs');
+
+const delay = (delayInms) => {
+  return new Promise(resolve => setTimeout(resolve, delayInms));
+}
+
+let oldImg = '', currentImg = '';
 
 // Case studies animation
 $(document).on('click', '.study-case', function (event) {
@@ -217,9 +218,29 @@ $(document).on('click', '.study-case', function (event) {
   if (this.id == "studyCase5") centerCase5();
 })
 
-function centerCase2() {
-  // console.log('2');
-  // $("#studyCase2-img").addClass("studyCase-img");
+async function centerCase2() {
+  if(currentImg === 'studyCase4-img') {
+    $('#studyCase4-img').css({"animation-play-state" : 'running'});
+
+    await setTimeout(() => {
+      $('#studyCase4-img').removeClass('studyCase4-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase1-img') {
+    $('#studyCase1-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase1-img').removeClass('studyCase1-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase5-img') {
+    $('#studyCase5-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase5-img').removeClass('studyCase5-img');
+    }, "1500");
+  }
+  
+  oldImg = currentImg;
+  currentImg = 'studyCase2-img';
 
   $('#studyCase2').toggleClass('active');
   $('#studyCase1').removeClass('active');
@@ -234,14 +255,27 @@ function centerCase2() {
     .to('#studyCase5', 1, { xPercent: 280, z: 75 }, 0)
 }
 
+
 function centerCase4() {
-  // anime4({
-  //   targets: '#studyCase4-img',
-  //   backgroundColor: '#FFF',
-  //   borderRadius: ['0%', '50%'],
-  //   easing: 'easeInOutQuad'
-  // });
+  if(currentImg === 'studyCase1-img') {
+    $('#studyCase1-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase1-img').removeClass('studyCase1-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase5-img') {
+    $('#studyCase5-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase5-img').removeClass('studyCase5-img');
+    }, "1500");
+  }
   $("#studyCase4-img").addClass("studyCase4-img");
+  setTimeout(() => {
+    $("#studyCase4-img").css({"animation-play-state" : 'paused'});
+  }, "1500");
+  
+  oldImg = currentImg;
+  currentImg = 'studyCase4-img';
 
   $('#studyCase4').toggleClass('active');
   $('#studyCase1').removeClass('active');
@@ -257,7 +291,27 @@ function centerCase4() {
 }
 
 function centerCase1() {
+  if(currentImg === 'studyCase4-img') {
+    $('#studyCase4-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase4-img').removeClass('studyCase4-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase5-img') {
+    $('#studyCase5-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase5-img').removeClass('studyCase5-img');
+    }, "1500");
+  }
   $("#studyCase1-img").addClass("studyCase1-img");
+
+  $("#studyCase1-img").addClass("studyCase1-img");
+  setTimeout(() => {
+    $("#studyCase1-img").css({"animation-play-state" : 'paused'});
+  }, "1500");
+
+  oldImg = currentImg;
+  currentImg = 'studyCase1-img';
 
   $('#studyCase1').toggleClass('active');
   $('#studyCase2').removeClass('active');
@@ -273,12 +327,28 @@ function centerCase1() {
 }
 
 function centerCase3() {
-  // anime3({
-  //   targets: '#studyCase3-img',
-  //   translateX: 50,
-  //   scale: 1.4,
-  //   rotate: '1turn'
-  // });
+  if(currentImg === 'studyCase4-img') {
+    $('#studyCase4-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase4-img').removeClass('studyCase4-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase1-img') {
+    $('#studyCase1-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase1-img').removeClass('studyCase1-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase5-img') {
+    $('#studyCase5-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase5-img').removeClass('studyCase5-img');
+    }, "1500");
+  }
+
+  oldImg = currentImg;
+  currentImg = 'studyCase3-img';
+
   $('#studyCase3').toggleClass('active');
   $('#studyCase1').removeClass('active');
   $('#studyCase2').removeClass('active');
@@ -293,7 +363,27 @@ function centerCase3() {
 }
 
 function centerCase5() {
+  if(currentImg === 'studyCase1-img') {
+    $('#studyCase1-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase1-img').removeClass('studyCase1-img');
+    }, "1500");
+  }
+  else if(currentImg === 'studyCase4-img') {
+    $('#studyCase4-img').css({"animation-play-state" : 'running'});
+    setTimeout(() => {
+      $('#studyCase4-img').removeClass('studyCase4-img');
+    }, "1500");
+  }
   $("#studyCase5-img").addClass("studyCase5-img");
+
+  $("#studyCase5-img").addClass("studyCase5-img");
+  setTimeout(() => {
+    $("#studyCase5-img").css({"animation-play-state" : 'paused'});
+  }, "1500");
+
+  oldImg = currentImg;
+  currentImg = 'studyCase5-img';
 
   $('#studyCase5').toggleClass('active');
   $('#studyCase1').removeClass('active');
@@ -310,6 +400,8 @@ function centerCase5() {
 
 $(function () {
   centerCase2();
+  oldImg = 'studyCase2-img';
+  currentImg = 'studyCase2-img';
 })
 // Case studies animation END
 
@@ -446,12 +538,12 @@ function scrollNews() {
     let ihs = $('.awards-section').height() + $('.studies-section').height() + $('#intro-home-section').height()
     if (scroll > ihs) {
       if (x === 0) {
-        /*$('.newsSlide1').css({
+        $('.newsSlide1').css({
           transform: "translateZ(-50%)"
         })
         $('.newsSlide2').css({
           animation: "slide 0.5s forwards"
-        })*/
+        })
         $('.news-title').toggleClass('active');
       }
       x = 1
