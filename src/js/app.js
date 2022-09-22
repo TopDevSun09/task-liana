@@ -13,6 +13,7 @@ import mobHeight from './helpers/mob-height';
 import initBodyHeight from './helpers/body-height';
 import Popups from './components/full-popup';
 import initTabs from './components/tabs';
+// import 'animate.css';
 
 (($) => {
   // When DOM is ready
@@ -199,6 +200,11 @@ function scrollBanner() {
     }
   });
 }
+const anime1 = require('animejs');
+const anime2 = require('animejs');
+const anime3 = require('animejs');
+const anime4 = require('animejs');
+const anime5 = require('animejs');
 
 // Case studies animation
 $(document).on('click', '.study-case', function (event) {
@@ -212,6 +218,9 @@ $(document).on('click', '.study-case', function (event) {
 })
 
 function centerCase2() {
+  // console.log('2');
+  // $("#studyCase2-img").addClass("studyCase-img");
+
   $('#studyCase2').toggleClass('active');
   $('#studyCase1').removeClass('active');
   $('#studyCase3').removeClass('active');
@@ -226,6 +235,14 @@ function centerCase2() {
 }
 
 function centerCase4() {
+  // anime4({
+  //   targets: '#studyCase4-img',
+  //   backgroundColor: '#FFF',
+  //   borderRadius: ['0%', '50%'],
+  //   easing: 'easeInOutQuad'
+  // });
+  $("#studyCase4-img").addClass("studyCase4-img");
+
   $('#studyCase4').toggleClass('active');
   $('#studyCase1').removeClass('active');
   $('#studyCase2').removeClass('active');
@@ -240,6 +257,8 @@ function centerCase4() {
 }
 
 function centerCase1() {
+  $("#studyCase1-img").addClass("studyCase1-img");
+
   $('#studyCase1').toggleClass('active');
   $('#studyCase2').removeClass('active');
   $('#studyCase3').removeClass('active');
@@ -254,6 +273,12 @@ function centerCase1() {
 }
 
 function centerCase3() {
+  // anime3({
+  //   targets: '#studyCase3-img',
+  //   translateX: 50,
+  //   scale: 1.4,
+  //   rotate: '1turn'
+  // });
   $('#studyCase3').toggleClass('active');
   $('#studyCase1').removeClass('active');
   $('#studyCase2').removeClass('active');
@@ -268,6 +293,8 @@ function centerCase3() {
 }
 
 function centerCase5() {
+  $("#studyCase5-img").addClass("studyCase5-img");
+
   $('#studyCase5').toggleClass('active');
   $('#studyCase1').removeClass('active');
   $('#studyCase2').removeClass('active');

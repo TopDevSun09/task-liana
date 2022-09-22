@@ -1,0 +1,33 @@
+.studyCase1-img {
+  width: 460px;
+  height: 430px;
+  position: absolute;
+  animation: mymove1 3s infinite;
+  clip: rect(0,460px,430px,0);
+}
+
+@keyframes mymove1 {
+  50% {clip: rect(0px,410px,430px,50px);}
+}
+
+.studyCase5-img {
+  width: 287px;
+  height: 190px;
+  position: absolute;
+  animation: mymove5 3s infinite;
+  clip: rect(0,287px,190px,0);
+}
+
+@keyframes mymove5 {
+  50% {clip: rect(0px,237px,190px,50px);}
+}
+
+.studyCase4-img {
+  width: 274px;
+  height: 273px;
+  animation: mymove4 3s infinite;
+}
+
+@keyframes mymove4 {
+  50% {border-radius: 137px;}
+}
