@@ -288,20 +288,20 @@ async function centerCase2() {
 async function centerCase4() {
   if(currentImg === 'studyCase1-img') {
     $('#studyCase1-img').css({"animation-play-state" : 'running'});
-    sleep(1500).then(() => { console.log(1); $('#studyCase1-img').removeClass('studyCase1-img'); });
+    sleep(1500).then(() => { $('#studyCase1-img').removeClass('studyCase1-img'); });
     // await setTimeout(() => {
     //   $('#studyCase1-img').removeClass('studyCase1-img');
     // }, "1500");
   }
   else if(currentImg === 'studyCase5-img') {
     $('#studyCase5-img').css({"animation-play-state" : 'running'});
-    sleep(1500).then(() => { console.log(5); $('#studyCase5-img').removeClass('studyCase5-img'); });
+    sleep(1500).then(() => { $('#studyCase5-img').removeClass('studyCase5-img'); });
     // await setTimeout(() => {
     //   $('#studyCase5-img').removeClass('studyCase5-img');
     // }, "1500");
   }
   $("#studyCase4-img").addClass("studyCase4-img");
-  sleep(1500).then(() => { console.log(4); $("#studyCase4-img").css({"animation-play-state" : 'paused'}); });
+  sleep(1500).then(() => { $("#studyCase4-img").css({"animation-play-state" : 'paused'}); });
   // await setTimeout(() => {
   //   $("#studyCase4-img").css({"animation-play-state" : 'paused'});
   // }, "1500");
@@ -572,28 +572,120 @@ function scrollAwards() {
   });
 }
 
-function scrollNews() {
-  let x = 0
-  $(window).on('scroll', function () {
-    var scroll = $(window).scrollTop();
-    let ihs = $('.awards-section').height() + $('.studies-section').height() + $('#intro-home-section').height()
-    if (scroll > ihs) {
-      if (x === 0) {
-        $('.newsSlide1').css({
-          transform: "translateZ(-50%)"
-        })
-        $('.newsSlide2').css({
-          animation: "slide 0.5s forwards"
-        })
-        $('.news-title').toggleClass('active');
+// function scrollNews() {
+//   let x = 0
+//   $(window).on('scroll', function () {
+//     var scroll = $(window).scrollTop();
+//     let ihs = $('.awards-section').height() + $('.studies-section').height() + $('#intro-home-section').height()
+//     if (scroll > ihs) {
+//       if (x === 0) {
+//         $('.newsSlide1').css({
+//           transform: "translateZ(-50%)"
+//         })
+//         $('.newsSlide2').css({
+//           animation: "slide 0.5s forwards"
+//         })
+//         $('.news-title').toggleClass('active');
+//       }
+//       x = 1
+//     }
+//   });
+// }
+
+$('.is-rotating').hover (function () {
+  const win = window
+  const doc = document.documentElement
+
+  doc.classList.remove('no-js')
+  doc.classList.add('js')
+
+  // Reveal animations
+  if (document.body.classList.contains('has-animations')) {
+    /* global ScrollReveal */
+    const sr = window.sr = ScrollReveal()
+
+    sr.reveal('.hero-title, .hero-paragraph, .hero-form', {
+      duration: 1000,
+      distance: '40px',
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+      origin: 'bottom',
+      interval: 150
+    })
+  }
+
+  // Moving objects
+  const movingObjects = document.querySelectorAll('.is-moving-object')
+
+  // Throttling
+  function throttle (func, milliseconds) {
+    let lastEventTimestamp = null
+    let limit = milliseconds
+
+    return (...args) => {
+      let now = Date.now()
+
+      if (!lastEventTimestamp || now - lastEventTimestamp >= limit) {
+        lastEventTimestamp = now
+        func.apply(this, args)
       }
-      x = 1
     }
-  });
-}
+  }
+
+  // Init vars
+  let mouseX = 0
+  let mouseY = 0
+  let scrollY = 0
+  let coordinateX = 0
+  let coordinateY = 0
+  let winW = doc.clientWidth
+  let winH = doc.clientHeight
+
+  // Move Objects
+  function moveObjects (e, object) {
+    mouseX = e.pageX
+    mouseY = e.pageY
+    scrollY = win.scrollY
+    coordinateX = (winW / 10) - mouseX
+    coordinateY = (winH / 2) - (mouseY - scrollY)
+
+    for (let i = 0; i < object.length; i++) {
+      const translatingFactor = object[i].getAttribute('data-translating-factor') || 20
+      const rotatingFactor = object[i].getAttribute('data-rotating-factor') || 20
+      const perspective = object[i].getAttribute('data-perspective') || 500
+      let tranformProperty = []
+
+      if (object[i].classList.contains('is-translating')) {
+        tranformProperty.push('translate(' + coordinateX / translatingFactor + 'px, ' + coordinateY / translatingFactor + 'px)')
+      }
+
+      if (object[i].classList.contains('is-rotating')) {
+        tranformProperty.push('perspective(' + perspective + 'px) rotateY(' + -coordinateX / rotatingFactor + 'deg) rotateX(' + coordinateY / rotatingFactor + 'deg)')
+      }
+
+      if (object[i].classList.contains('is-translating') || object[i].classList.contains('is-rotating')) {
+        tranformProperty = tranformProperty.join(' ')
+
+        object[i].style.transform = tranformProperty
+        object[i].style.transition = 'transform 1s ease-out'
+        object[i].style.transformStyle = 'preserve-3d'
+        object[i].style.backfaceVisibility = 'hidden'
+      }
+    }
+  }
+
+  // Call function with throttling
+  if (movingObjects) {
+    win.addEventListener('mousemove', throttle(
+      function (e) {
+        moveObjects(e, movingObjects)
+      },
+      150
+    ))
+  }
+}())
 
 scrollStudies();
 scrollAwards();
-scrollNews();
+// scrollNews();
 
 /* HOMEPAGE END */
