@@ -592,7 +592,7 @@ function scrollAwards() {
 //   });
 // }
 
-$('.is-rotating').hover (function () {
+(function () {
   const win = window
   const doc = document.documentElement
 
@@ -612,6 +612,7 @@ $('.is-rotating').hover (function () {
       interval: 150
     })
   }
+
 
   // Moving objects
   const movingObjects = document.querySelectorAll('.is-moving-object')
@@ -645,8 +646,8 @@ $('.is-rotating').hover (function () {
     mouseX = e.pageX
     mouseY = e.pageY
     scrollY = win.scrollY
-    coordinateX = (winW / 10) - mouseX
-    coordinateY = (winH / 2) - (mouseY - scrollY)
+    coordinateX = ((winW / 2) - mouseX) / 10
+    coordinateY = ((winH / 2) - (mouseY - scrollY)) / 5
 
     for (let i = 0; i < object.length; i++) {
       const translatingFactor = object[i].getAttribute('data-translating-factor') || 20
