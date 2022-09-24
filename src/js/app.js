@@ -572,25 +572,25 @@ function scrollAwards() {
   });
 }
 
-// function scrollNews() {
-//   let x = 0
-//   $(window).on('scroll', function () {
-//     var scroll = $(window).scrollTop();
-//     let ihs = $('.awards-section').height() + $('.studies-section').height() + $('#intro-home-section').height()
-//     if (scroll > ihs) {
-//       if (x === 0) {
-//         $('.newsSlide1').css({
-//           transform: "translateZ(-50%)"
-//         })
-//         $('.newsSlide2').css({
-//           animation: "slide 0.5s forwards"
-//         })
-//         $('.news-title').toggleClass('active');
-//       }
-//       x = 1
-//     }
-//   });
-// }
+function scrollNews() {
+  let x = 0
+  $(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+    let ihs = $('.awards-section').height() + $('.studies-section').height() + $('#intro-home-section').height()
+    if (scroll > ihs) {
+      if (x === 0) {
+        $('.newsSlide1').css({
+          transform: "translateZ(-50%)"
+        })
+        $('.newsSlide2').css({
+          animation: "slide 0.5s forwards"
+        })
+        $('.news-title').toggleClass('active');
+      }
+      x = 1
+    }
+  });
+}
 
 (function () {
   const win = window
